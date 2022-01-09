@@ -4,6 +4,18 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="user" class="com.company.User"></bean>
+<!--    <bean id="user" class="com.company.User"></bean>-->
 
+
+<!--    <bean id="book" class="com.company.Book">-->
+<!--        <property name="bname" value="Strategy"></property>-->
+<!--        <property name="bauthor" value="Haywood"></property>-->
+<!--    </bean>-->
+
+    <bean id="orders" class="com.company.Orders">
+        <constructor-arg name="oname" value="Leghmen"></constructor-arg>
+<!--   <constructor-arg index="0" value="Leghmen"></constructor-arg>-->
+        <constructor-arg name="address" value="EastTurkistan"></constructor-arg>
+
+    </bean>
 </beans>

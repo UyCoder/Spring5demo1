@@ -1,6 +1,7 @@
 package com.company.testdemo;
 
-import com.company.User;
+import com.company.Book;
+import com.company.Orders;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -19,13 +20,27 @@ public class TestSpring5 {
     @Test
     public void testAdd() {
         // 1 add springconfig file bean1.xml
-        ApplicationContext context =
+        ApplicationContext context = // or "BeanFactory context= "
                 new ClassPathXmlApplicationContext("bean1.xml");
 
         // 2 get the class file
-        User user = context.getBean("user", User.class);
-        System.out.println(user);
-        user.add();
+        Book book = context.getBean("book", Book.class);
+        System.out.println(book);
+        book.testdemo();
     }
+
+    @Test
+    public void testOrders() {
+        // 1 add springconfig file bean1.xml
+        ApplicationContext context = // or "BeanFactory context= "
+                new ClassPathXmlApplicationContext("bean1.xml");
+
+        // 2 get the class file
+        Orders orders = context.getBean("orders", Orders.class);
+        System.out.println(orders);
+        orders.testOrder();
+    }
+
+
 
 }
