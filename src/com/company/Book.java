@@ -12,6 +12,12 @@ package com.company;
 public class Book {
     private String bname;
     private String bauthor;
+    private String address;
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
 
     public void setBname(String bname) {
         this.bname = bname;
@@ -21,7 +27,9 @@ public class Book {
         this.bauthor = bauthor;
     }
 
+
+
     public void testdemo() {
-        System.out.println(bauthor + "::" + bname);
+        System.out.println(bauthor + "::" + bname + "::" + address);
     }
 }
